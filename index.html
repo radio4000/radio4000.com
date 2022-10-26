@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>radio4000</title>
+		<meta name="description" content="r4-app">
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<link rel="stylesheet" href="/index.css"/>
+		<script type="module">
+			import r4 from 'https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/index.js'
+
+			/* App config
+				 - get the public environment config from a json file,
+				 - set it on the app's custom-element
+				 - append the app as the only element of the body's DOM
+			 */
+
+			const containerElementName = 'body'
+			const appElementName = 'r4-app'
+				/* customElements.define(appElementName, r4.R4App) */
+			const $app = document.createElement(appElementName)
+			fetch('/.env.json').then(async (data) => {
+				let config = {}
+				try {
+					config = await data.json()
+				} catch (e) {
+					console.info('.env.json config file not found')
+				}
+				return config
+			}).then(config => {
+				Object.entries(config).forEach(([key, value]) => {
+					if (typeof value === 'object') {
+						$app.setAttribute(key, JSON.stringify(value))
+					} else {
+						$app.setAttribute(key, value)
+					}
+				})
+			}).finally(() => {
+				document.querySelector(containerElementName).append($app)
+				console.info(`${appElementName} loaded`)
+			})
+		</script>
+	</head>
+	<body></body>
+</html>
