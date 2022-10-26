@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - run: rm .env.json
+      - run: mv .env.production.json .env.json
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact

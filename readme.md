@@ -20,6 +20,10 @@ To deploy this project on a live domain:
 
 > be sure to have your host let our application router handle the redirects (see the `_redirects` file example).
 
+> The github deploy action, removes the `.env.json` file, and `mv
+> .env.production.json .env.json` to use the production environment
+> file as the `.env.json` file
+
 ## `.env.json`
 
 The environment variables, are used to setup the specificities of the app we will be running, such as the address of the domain it will be hosted at.
