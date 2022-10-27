@@ -51,3 +51,8 @@ body {
 r4-app {
 	display: flex;
 }
+
+/* text */
+a {
+	color: var(--color-text);
+}
