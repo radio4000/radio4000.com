@@ -21,7 +21,7 @@ html {
 @media (prefers-color-scheme: dark) {
 	:root,
 	r4-app {
-		--coclor-text: white;
+		--color-text: white;
 		--color-background: black;
 		--color-link: purple;
 	}
