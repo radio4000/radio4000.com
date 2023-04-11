@@ -1,38 +1,9 @@
-/* https://css-tricks.com/box-sizing/#aa-universal-box-sizing-with-inheritance */
-html {
-	box-sizing: border-box;
-}
-*, *:before, *:after {
-	box-sizing: inherit;
-}
-
-/* variables */
+/* Overwrite variables from r4.css */
 :root,
 :host {
-	--size-font: 18px;
-	--size: 1.3em;
-}
-@media screen (min-width: 50rem) {
-	:root,
-	:host {
-		--size-font: 21px;
-	}
-}
-@media (prefers-color-scheme: dark) {
-	:root,
-	r4-app {
-		--color-text: white;
-		--color-background: black;
-		--color-link: purple;
-	}
-}
-@media (prefers-color-scheme: light) {
-	:root,
-	r4-app {
-		--color-text: black;
-		--color-background: white;
-		--color-link: cyan;
-	}
+	/* --size-font: 18px; */
+	/* --font-family: segoe ui, system-ui, sans-serif; */
+	/* --size: 2em; */
 }
 
 /* variables applied */
@@ -45,14 +16,4 @@ r4-app {
 }
 
 /* layout */
-body {
-	margin: 0;
-}
-r4-app {
-	display: flex;
-}
 
-/* text */
-a {
-	color: var(--color-text);
-}
