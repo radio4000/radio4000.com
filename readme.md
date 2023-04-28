@@ -1,6 +1,7 @@
 # Radio4000
 
-A starter for self-hosted Radio4000 frontend.
+A starter for self-hosted Radio4000 frontend.  
+See an example on https://beta.radio4000.com.
 
 ## Local development
 
