@@ -1,28 +1,25 @@
 # Radio4000
 
-A starter for self hosted radio4000 frontend
+A starter for self-hosted Radio4000 frontend.
 
-## Usage
+## Local development
 
-> To use on your local machine, see #development section
-
-## Development
-
-- download/clone this project on your machine
-- run `npm run dev`, if you have `node` (js) installed (or any other static file server, in the current directory).
+- Download/clone this project on your machine
+- Run `npm run dev`, if you have `node` (js) installed (or any other static file server, in the current directory).
 
 ## Deployment
 
-To deploy this project on a live domain:
+This project loads the latest version of https://github.com/radio4000/components from [npm](https://www.npmjs.com/package/@radio4000/components) in the `index.html` file.
 
-- customize the values of `.env.json`
-- deploy all files in this repo (except the `.git` repository), like you would do for any other static website
+To deploy on a live domain:
 
-> be sure to have your host let our application router handle the redirects (see the `_redirects` file example).
+1. Customize the values of `.env.json` and `.env.production.json`
+2. Deploy all files in this repo (except the `.git` repository), like you would do for any other static website
 
-> The github deploy action, removes the `.env.json` file, and `mv
-> .env.production.json .env.json` to use the production environment
-> file as the `.env.json` file
+> Be sure to have your webserver/host handle redirects to index.html (see the `_redirects` file example).
+
+> The github deploy action removes the `.env.json` file,
+> and `mv .env.production.json .env.json` to switch to production environment
 
 ## `.env.json`
 
