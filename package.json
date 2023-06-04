@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "npx serve .",
-		"build": "echo \"No need to build"
+		"build": "echo \"No need to build\""
   },
   "repository": {
     "type": "git",
