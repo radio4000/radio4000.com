@@ -1,0 +1,22 @@
+{
+  "name": "Radio4000",
+  "short_name": "Radio4000",
+  "description": "Collect, curate, play and share your own radio channel",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#5d1ae6",
+  "theme_color": "#fff",
+  "app": {
+    "launch": {
+      "web_url": "https://beta.radio4000.com/"
+    }
+  },
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
