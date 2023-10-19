@@ -1,17 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
 		<title>Radio4000</title>
-		<meta name="description" content="r4-app">
-		<link rel="manifest" href="/webmanifest.json">
+		<meta name="description" content="r4-app" />
+		<link rel="manifest" href="/webmanifest.json" />
 		<link rel="icon" href="/favicon.png" sizes="192x192" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radio4000/components/dist/r4.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@radio4000/components/dist/r4.css"
+		/>
 		<link rel="stylesheet" href="./index.css" />
 
 		<script type="module">
-			import r4 from 'https://cdn.jsdelivr.net/npm/@radio4000/components/dist/r4.js'
+			import r4 from "https://cdn.jsdelivr.net/npm/@radio4000/components/dist/r4.js";
 		</script>
 		<script type="module">
 			/* App config
@@ -20,30 +23,33 @@
 				 - append the app as the only element of the body's DOM
 			 */
 
-			const containerElementName = 'body'
-			const appElementName = 'r4-app'
+			const containerElementName = "body";
+			const appElementName = "r4-app";
 			/* customElements.define(appElementName, r4.R4App) */
-			const $app = document.createElement(appElementName)
-			fetch('/.env.json').then(async (data) => {
-				let config = {}
-				try {
-					config = await data.json()
-				} catch (e) {
-					console.info('.env.json config file not found')
-				}
-				return config
-			}).then(config => {
-				Object.entries(config).forEach(([key, value]) => {
-					if (typeof value === 'object') {
-						$app.setAttribute(key, JSON.stringify(value))
-					} else {
-						$app.setAttribute(key, value)
+			const $app = document.createElement(appElementName);
+			fetch("/.env.json")
+				.then(async (data) => {
+					let config = {};
+					try {
+						config = await data.json();
+					} catch (e) {
+						/* console.info('.env.json config file not found') */
 					}
+					return config;
 				})
-			}).finally(() => {
-				document.querySelector(containerElementName).append($app)
-				console.info(`${appElementName} loaded`)
-			})
+				.then((config) => {
+					Object.entries(config).forEach(([key, value]) => {
+						if (typeof value === "object") {
+							$app.setAttribute(key, JSON.stringify(value));
+						} else {
+							$app.setAttribute(key, value);
+						}
+					});
+				})
+				.finally(() => {
+					document.querySelector(containerElementName).append($app);
+					/* console.info(`${appElementName} loaded`) */
+				});
 		</script>
 	</head>
 	<body></body>
