@@ -27,3 +27,9 @@ To deploy on a live domain:
 The environment variables, are used to setup the specificities of the app we will be running, such as the address of the domain it will be hosted at.
 
 - `href` is the value of the base URL for the app. In a browser developer console, use `window.location` and find the value of `href`, to find out what is the base URL of your application (online or locally).
+
+### Note on CDN latest version purge/refresh
+If the CDN (jsdelivr) is not giving the latest version, because
+caching a previous one, put the URL
+`https://cdn.jsdelivr.net/npm/@radio4000/components/dist/r4.js` in
+here https://www.jsdelivr.com/tools/purge
