@@ -29,7 +29,13 @@ The environment variables, are used to setup the specificities of the app we wil
 - `href` is the value of the base URL for the app. In a browser developer console, use `window.location` and find the value of `href`, to find out what is the base URL of your application (online or locally).
 
 ### Note on CDN latest version purge/refresh
-If the CDN (jsdelivr) is not giving the latest version, because
-caching a previous one, put the URL
-`https://cdn.jsdelivr.net/npm/@radio4000/components/dist/r4.js` in
-here https://www.jsdelivr.com/tools/purge
+
+If the CDN (jsdelivr) is not giving the latest version, because of caching, put these URLs into  https://www.jsdelivr.com/tools/purge.
+
+```
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/r4.js
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/minimal.css
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/default.css
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/classic.css
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/jellybeans.css
+```
