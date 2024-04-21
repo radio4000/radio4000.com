@@ -33,9 +33,10 @@ The environment variables, are used to setup the specificities of the app we wil
 If the CDN (jsdelivr) is not giving the latest version, because of caching, put these URLs into  https://www.jsdelivr.com/tools/purge.
 
 ```
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/r4.css
 https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/r4.js
-https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/minimal.css
-https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/default.css
 https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/classic.css
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/hash.css
 https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/jellybeans.css
+https://cdn.jsdelivr.net/npm/@radio4000/components@latest/dist/themes/minimal.css
 ```
