@@ -1,19 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width,initial-scale=1,viewport-fit=cover"
-		/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 		<title>Radio4000</title>
-		<meta
-			name="description"
-			content="Collect, curate, play and share your own radio channel"
-		/>
+		<meta name="description" content="Collect, curate, play and share your own radio channel" />
 		<link rel="manifest" href="/webmanifest.json" />
 		<link rel="icon" href="/favicon.png" sizes="192x192" />
-		<script type="module" src="./src/index.js"></script>
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<!-- extra styles -->
+		<link rel="stylesheet" href="/index.css" />
+		<!-- @radio4000/components -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radio4000/components@0.1.59/dist/style.css" />
+		<script type="module">
+			import 'https://cdn.jsdelivr.net/npm/@radio4000/components@0.1.59/dist/r4.js'
+		</script>
 	</head>
-	<body></body>
+	<body>
+
+		<r4-app href="https://beta.radio400" cdn="true"></r4-app>
+
+	</body>
 </html>
