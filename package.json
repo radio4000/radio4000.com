@@ -4,21 +4,25 @@
   "description": "A starter for self hosting a radio4000 frontend homepage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "npx serve .",
-		"build": "echo \"No need to build\""
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/radio4000/radio4000.github.io.git"
   },
-  "keywords": [
-    "radio4000"
-  ],
+  "keywords": ["radio4000"],
   "author": "r4",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/radio4000/radio4000.github.io/issues"
   },
-  "homepage": "https://github.com/radio4000/radio4000.github.io#readme"
+  "homepage": "https://github.com/radio4000/radio4000.github.io#readme",
+  "devDependencies": {
+    "vite": "^5.2.10"
+  },
+  "dependencies": {
+    "@radio4000/components": "^0.1.59"
+  }
 }
