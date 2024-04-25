@@ -1,6 +1,6 @@
 import "./index.css";
 import "@radio4000/components/style";
-import r4 from "@radio4000/components";
+import r4 from "@radio4000/components/";
 
 /* App config
 	 - get the public environment config from a json file,
