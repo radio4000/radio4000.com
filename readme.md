@@ -1,7 +1,10 @@
 # Radio4000
 
-A starter for self-hosted Radio4000 frontend.  
-See an example on https://beta.radio4000.com.
+This repository is is auto deployed to https://radio4000.com. 
+
+You can also use it to host your own Radio4000 front-end. See deployment below.
+
+The `index.html` imports all [@radio4000/components](https://github.com/radio4000/components) and renders the `<r4-app>` component.
 
 ## Local development
 
@@ -10,23 +13,14 @@ See an example on https://beta.radio4000.com.
 
 ## Deployment
 
-This project loads the latest version of https://github.com/radio4000/components from [npm](https://www.npmjs.com/package/@radio4000/components) in the `index.html` file.
-
 To deploy on a live domain:
 
-1. Customize the values of `.env.json` and `.env.production.json`
+1. Customize the attributes on `<r4-app>` inside `index.html`
 2. Deploy all files in this repo (except the `.git` repository), like you would do for any other static website
 
+- The `href` attribute of `<r4-app>` is the base URL for the app. In a browser developer console, use `window.location` and find the value of `href`, to find out what is the base URL of your application (online or locally).
+
 > Be sure to have your webserver/host handle redirects to index.html (see the `_redirects` file example).
-
-> The github deploy action removes the `.env.json` file,
-> and `mv .env.production.json .env.json` to switch to production environment
-
-## `.env.json`
-
-The environment variables, are used to setup the specificities of the app we will be running, such as the address of the domain it will be hosted at.
-
-- `href` is the value of the base URL for the app. In a browser developer console, use `window.location` and find the value of `href`, to find out what is the base URL of your application (online or locally).
 
 ### Note on CDN latest version purge/refresh
 
