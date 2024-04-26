@@ -1,3 +1,4 @@
+// currently not-used, only index.html is (this is for the vite.js setup)
 import "./index.css";
 import r4 from "@radio4000/components";
 import "@radio4000/components/style";
